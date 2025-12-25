@@ -9,6 +9,4 @@ public class HelloController {
     public String hello() {
         return "Backend Spring está vivo!";
     }
-
-
 }
