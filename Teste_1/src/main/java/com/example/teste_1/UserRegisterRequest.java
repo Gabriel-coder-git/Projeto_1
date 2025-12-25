@@ -2,20 +2,20 @@ package com.example.teste_1;
 
 public class UserRegisterRequest {
 
-    private String nome;
-    private String email;
-    private String senha;
+    private static String nome;
+    private static String email;
+    private static String senha;
     private String confirmSenha;
 
-    public String getNome() {
+    public static String getNome() {
         return nome;
     }
 
-    public String getEmail() {
+    public static String getEmail() {
         return email;
     }
 
-    public String getSenha() {
+    public static String getSenha() {
         return senha;
     }
 
@@ -23,9 +23,6 @@ public class UserRegisterRequest {
         return confirmSenha;
     }
 
-    System.out.println(
-
-            )
 }
 
 

@@ -14,9 +14,12 @@ public class RegisterController {
             return "Senhas não conferem";
         }
 
-        return "Usuário registrado com sucesso!";
+        System.out.println("=== CHEGOU NO BACKEND ===");
+        System.out.println("Nome: " + UserRegisterRequest.getNome());
+        System.out.println("Email: " + UserRegisterRequest.getEmail());
+        System.out.println("Senha: " + UserRegisterRequest.getSenha());
 
-
+        return "Usuário registrado com sucesso";
     }
 }
 
