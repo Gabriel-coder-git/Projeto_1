@@ -5,10 +5,11 @@ import org.springframework.web.bind.annotation.*;
 // Diz pro Spring:
 // "essa classe recebe requisições HTTP"
 @RestController
-
+@CrossOrigin(origins = "*") // libera qualquer origem
 // Define a rota base
 // Tudo aqui começa com /usuarios
 @RequestMapping("/usuarios")
+
 public class UsuarioController {
 
     // ===== ATRIBUTO =====
