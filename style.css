@@ -27,15 +27,16 @@ h3{
     margin: 0px;
     color: black;
 }
-h4{
-    font-family: Arial, Helvetica, sans-serif;
+a{
+    font-family: Arial;
+    display: block;
     font-size: 15px;
     text-align: center;
     margin: 0px;
     color: #007bff;
     cursor: pointer;
 }
-h4:hover{
+a:hover{
     color: #0056b3;
     text-decoration: underline;
 }

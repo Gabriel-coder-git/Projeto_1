@@ -2,12 +2,12 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Registrar Usuário</title>
+    <title>Login Usuário</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <p id="msg" style="display: none;"></p>
-    <h2>Registro</h2>
+    <h2>Login</h2>
 
     <form>
         <label for="usuario">Usuário:</label>
@@ -19,13 +19,10 @@
         <label for="senha">Senha:</label>
         <input type="password" id="senha" name="senha" placeholder="Digite sua senha"><br><br>
 
-        <label for="senhaconfirm">Confirme sua senha:</label>
-        <input type="password" id="senhaconfirm" name="senhaconfirm" placeholder="Confirme sua senha"><br><br>
-
         <button type="button" onclick="RegistraUsuario()">Registrar</button>
         
     </form>
-        <script src="script.js"></script>
+        <script src="login.js"></script>
 </body>
-        <h3>Já está registrado?</h3> <a href="login.html">Login</a>
+        <h3>Não está registrado?</h3> <a href="index.html">Registrar</a>
 </html>
