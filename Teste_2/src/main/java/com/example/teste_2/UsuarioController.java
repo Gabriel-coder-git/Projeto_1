@@ -35,7 +35,7 @@ public class UsuarioController {
 
         // Chama a lógica
         usuarioService.salvarUsuario(usuario);
-
+        usuarios.add(usuario);
         // Retorno HTTP
         return "Usuário registrado com sucesso" + usuario.getEmail() + usuario.getNome() ;
 
@@ -57,7 +57,7 @@ public class UsuarioController {
     // Endpoint de registro (pra já poder salvar usuários)
     @PostMapping("/registrar")
     public String registrarUsuario(@RequestBody Usuario usuario){
-        usuarios.add(usuario);
+
         return "Usuário registrado com sucesso!";
     }
 
