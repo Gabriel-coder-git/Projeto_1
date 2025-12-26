@@ -46,10 +46,10 @@ public class UsuarioController {
     public String registrarUsuario1(@RequestBody Usuario usuario) {
 
         // Chama a lógica
-        usuarioService.registrarUsuario(usuario);
-
+        usuarioService.salvarUsuario(usuario);
+        usuarios.add(usuario);
         // Retorno HTTP
-        return "Usuário registrado com sucesso" + usuario.getEmail() + usuario.getNome() ;
+        return "Usuário: " + usuario.getNome() + " Email: " + usuario.getEmail() + " registrado com sucesso!";
 
     }
 
@@ -57,7 +57,7 @@ public class UsuarioController {
     public String loginUsuario(@RequestBody Usuario usuario){
         for(Usuario u : usuarios){
             // compara email e senha recebidos
-            if(u.getEmail().equals(usuario.getEmail()) && u.getSenha().equals(usuario.getSenha())){
+            if(u.getEmail().equals(usuario.getEmail()) && u.getSenha().equals(usuario.getSenha()) && u.getNome().equals(usuario.getNome())){
                 return "Login bem-sucedido! Bem-vindo, " + u.getNome();
             }
         }

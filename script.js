@@ -23,7 +23,7 @@ function RegistraUsuario() {
     };
 
     // 3️⃣ Envio
-    fetch("http://localhost:8080/usuarios/registrar", {
+    fetch("http://localhost:8080/usuarios/registrar1", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
