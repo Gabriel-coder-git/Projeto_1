@@ -84,13 +84,13 @@ button:hover{
 
 p{
     position: fixed;
+    text-align: center;
     top: 10%;
-    right: 20%;
-    left: 20%;
-    min-width: 250px;
-    padding: 23px;
+    left: 30%;
+    right: 30%;
+    padding: 10px;
     border-radius: 20px;
     display: none;
     z-index: 9999;
-    background-color: #4caf4f48;
+    background-color: #ffffffac;
 }
