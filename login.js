@@ -18,7 +18,7 @@ function loginUsuario() {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(usuario)
-    })  
+    })
     .then(response => response.text())
     .then(data => {
         msg.textContent = data;
