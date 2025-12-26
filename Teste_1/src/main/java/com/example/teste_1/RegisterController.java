@@ -10,7 +10,7 @@ public class RegisterController {
     @PostMapping("/register")
     public String register(@RequestBody UserRegisterRequest request) {
 
-        if (!request.getSenha().equals(request.getConfirmSenha())) {
+        if (!UserRegisterRequest.getSenha().equals(request.getConfirmSenha())) {
             return "Senhas não conferem";
         }
 
