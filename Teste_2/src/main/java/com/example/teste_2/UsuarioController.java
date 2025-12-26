@@ -1,7 +1,8 @@
 package com.example.teste_2;
 
 import org.springframework.web.bind.annotation.*;
-
+import java.util.ArrayList;
+import java.util.List;
 // Diz pro Spring:
 // "essa classe recebe requisições HTTP"
 @RestController
@@ -22,15 +23,15 @@ public class UsuarioController {
         this.usuarioService = usuarioService;
     }
 
+    private List<Usuario> usuarios = new ArrayList<>();
+
     @GetMapping
     public String teste() {
         return "Controller de usuários funcionando";
     }
 
-    // ===== ENDPOINT =====
-    // POST /usuarios/registrar
-    @PostMapping("/registrar")
-    public String registrarUsuario(@RequestBody Usuario usuario) {
+    @PostMapping("/registrar1")
+    public String registrarUsuario1(@RequestBody Usuario usuario) {
 
         // Chama a lógica
         usuarioService.salvarUsuario(usuario);
@@ -39,5 +40,26 @@ public class UsuarioController {
         return "Usuário registrado com sucesso" + usuario.getEmail() + usuario.getNome() ;
 
     }
+
+    @PostMapping("/login")
+    public String loginUsuario(@RequestBody Usuario usuario){
+        for(Usuario u : usuarios){
+            // compara email e senha recebidos
+            if(u.getEmail().equals(usuario.getEmail()) && u.getSenha().equals(usuario.getSenha())){
+                return "Login bem-sucedido! Bem-vindo, " + u.getNome();
+            }
+        }
+        return "Usuário ou senha incorretos!";
+    }
+
+
+
+    // Endpoint de registro (pra já poder salvar usuários)
+    @PostMapping("/registrar")
+    public String registrarUsuario(@RequestBody Usuario usuario){
+        usuarios.add(usuario);
+        return "Usuário registrado com sucesso!";
+    }
+
 }
 
