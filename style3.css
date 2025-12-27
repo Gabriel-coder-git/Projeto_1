@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* TOPO */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #007bff;
+    color: white;
+    padding: 10px 20px;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 20px;
+}
+
+.right {
+    display: flex;
+    gap: 20px;
+}
+
+/* ÍCONES */
+.icon, .menu {
+    position: relative;
+    cursor: pointer;
+}
+
+/* BALÃO (dropdown) */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background: white;
+    color: black;
+    padding: 10px;
+    border-radius: 6px;
+    min-width: 150px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    z-index: 10;
+}
+
+.dropdown a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    margin-bottom: 5px;
+}
+
+/* MOSTRAR AO PASSAR O MOUSE */
+.icon:hover .dropdown,
+.menu:hover .dropdown {
+    display: block;
+}
+
+/* CARRINHO */
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 5px;
+}
+
+h2{
+    font-family: Arial;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #007bff;
+}
+
+.cart-item img {
+    width: 30px;
+    height: 30px;
+}
+
+/* CONTEÚDO */
+.content {
+    display: flex;
+    height: calc(100vh - 60px);
+}
+
+/* MAPA */
+.map-area {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #eee;
+}
+
+.map-area img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 300px;
+    background: #e3ebf7;
+    padding: 15px;
+    border-left: 1px solid #ccc;
+}
+
+.store {
+    background: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
